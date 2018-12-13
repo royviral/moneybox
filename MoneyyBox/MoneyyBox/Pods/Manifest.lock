@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.7.3)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - SDLoader (0.2.0)
+  - SwiftyJSON (4.1.0)
+  - Toast-Swift (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - GoogleMaps
+  - SDLoader
+  - SwiftyJSON
+  - Toast-Swift (~> 2.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - GoogleMaps
+    - SDLoader
+    - SwiftyJSON
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  SDLoader: e35b571db413a4a98b6f58469b16dc095289c9f6
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
+
+PODFILE CHECKSUM: b015aa64a81e2594a8e011b93df121a8f7e08e0a
+
+COCOAPODS: 1.5.3
