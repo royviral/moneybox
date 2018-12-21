@@ -50,6 +50,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
         case 5:
             
             break
+        case 6:
+            
+            
+            
+            break
             
         default:
             print("default\n", terminator: "")

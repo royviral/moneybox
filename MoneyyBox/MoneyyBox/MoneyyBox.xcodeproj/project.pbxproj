@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9FCB429A54A32A1F78F4071E /* Pods_MoneyyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AE6E95C61DC56743EFC8B1 /* Pods_MoneyyBox.framework */; };
 		E048BDBB21BEB1B200C39A09 /* UserChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048BDBA21BEB1B200C39A09 /* UserChangePasswordVC.swift */; };
+		E0CA96E321C644E3006D0F3B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CA96E221C644E3006D0F3B /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E0EC5F1021BCE0CF00B8C3BF /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */; };
+		E0F2D0E221C7C021006D2484 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2D0E121C7C021006D2484 /* Constants.swift */; };
+		E0FD601D21C3C9C300D94A7C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FD601C21C3C9C200D94A7C /* Location.swift */; };
+		E0FD601F21C3C9F300D94A7C /* LocationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FD601E21C3C9F300D94A7C /* LocationStorage.swift */; };
 		F9159EAC21A0455A001439BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9159EAB21A0455A001439BC /* CoreLocation.framework */; };
 		F9159EAE21A04C29001439BC /* blueNav.png in Resources */ = {isa = PBXBuildFile; fileRef = F9159EAD21A04C28001439BC /* blueNav.png */; };
 		F9159EB121A04D50001439BC /* nav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9159EAF21A04D4F001439BC /* nav@2x.png */; };
@@ -64,7 +68,12 @@
 /* Begin PBXFileReference section */
 		401904A3EEE629B4C174B12C /* Pods-MoneyyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyyBox/Pods-MoneyyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		E048BDBA21BEB1B200C39A09 /* UserChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChangePasswordVC.swift; sourceTree = "<group>"; };
+		E0CA96E221C644E3006D0F3B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D9879A21C6434F00ED07C2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		E0F2D0E121C7C021006D2484 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E0FD601C21C3C9C200D94A7C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E0FD601E21C3C9F300D94A7C /* LocationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStorage.swift; sourceTree = "<group>"; };
 		E6799A4D8354644CCF7BA8C9 /* Pods-MoneyyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyyBox/Pods-MoneyyBox.release.xcconfig"; sourceTree = "<group>"; };
 		E9AE6E95C61DC56743EFC8B1 /* Pods_MoneyyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9159EAB21A0455A001439BC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -125,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CA96E321C644E3006D0F3B /* Alamofire.framework in Frameworks */,
 				F9159EAC21A0455A001439BC /* CoreLocation.framework in Frameworks */,
 				9FCB429A54A32A1F78F4071E /* Pods_MoneyyBox.framework in Frameworks */,
 			);
@@ -136,6 +146,8 @@
 		2065B972FE77454ECAC00517 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0CA96E221C644E3006D0F3B /* Alamofire.framework */,
+				E0D9879A21C6434F00ED07C2 /* Alamofire.framework */,
 				F9159EAB21A0455A001439BC /* CoreLocation.framework */,
 				E9AE6E95C61DC56743EFC8B1 /* Pods_MoneyyBox.framework */,
 			);
@@ -202,6 +214,8 @@
 				F9159EB721A05C5E001439BC /* ForgotPasswordVC.swift */,
 				E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */,
 				E048BDBA21BEB1B200C39A09 /* UserChangePasswordVC.swift */,
+				E0FD601C21C3C9C200D94A7C /* Location.swift */,
+				E0FD601E21C3C9F300D94A7C /* LocationStorage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +266,7 @@
 				F94DE19B2184E38C001C9DEE /* CPAlertVC.swift */,
 				F94DE1AE2184F22E001C9DEE /* BaseViewController.swift */,
 				F94DE1AF2184F22E001C9DEE /* MenuViewController.swift */,
+				E0F2D0E121C7C021006D2484 /* Constants.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -326,7 +341,6 @@
 				TargetAttributes = {
 					F94DE1512184C053001C9DEE = {
 						CreatedOnToolsVersion = 9.4;
-						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -336,7 +350,7 @@
 				};
 			};
 			buildConfigurationList = F94DE14D2184C053001C9DEE /* Build configuration list for PBXProject "MoneyyBox" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -468,6 +482,7 @@
 			files = (
 				F94DE15E2184C053001C9DEE /* MoneyyBox.xcdatamodeld in Sources */,
 				F94DE1762184C15B001C9DEE /* HomeVC.swift in Sources */,
+				E0FD601D21C3C9C300D94A7C /* Location.swift in Sources */,
 				F94DE19D2184E38C001C9DEE /* CPAlertAction.swift in Sources */,
 				F94DE1742184C14B001C9DEE /* RegisterVC.swift in Sources */,
 				F94DE1B02184F22E001C9DEE /* BaseViewController.swift in Sources */,
@@ -476,11 +491,13 @@
 				F94DE1B12184F22E001C9DEE /* MenuViewController.swift in Sources */,
 				F94DE1562184C053001C9DEE /* AppDelegate.swift in Sources */,
 				E0EC5F1021BCE0CF00B8C3BF /* UserProfileVC.swift in Sources */,
+				E0F2D0E221C7C021006D2484 /* Constants.swift in Sources */,
 				F94DE1722184C13B001C9DEE /* LoginVC.swift in Sources */,
 				F94DE19E2184E38C001C9DEE /* CPAlertVC.swift in Sources */,
 				F94DE1992184D58C001C9DEE /* PageViewController.swift in Sources */,
 				F9159EB821A05C5E001439BC /* ForgotPasswordVC.swift in Sources */,
 				E048BDBB21BEB1B200C39A09 /* UserChangePasswordVC.swift in Sources */,
+				E0FD601F21C3C9F300D94A7C /* LocationStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -611,10 +628,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -624,16 +642,20 @@
 			baseConfigurationReference = 401904A3EEE629B4C174B12C /* Pods-MoneyyBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GXM322EVJ;
 				INFOPLIST_FILE = MoneyyBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FHProduction.MoneyyBox;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cubetechnology-gautam.MoneyyBox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -642,16 +664,20 @@
 			baseConfigurationReference = E6799A4D8354644CCF7BA8C9 /* Pods-MoneyyBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GXM322EVJ;
 				INFOPLIST_FILE = MoneyyBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FHProduction.MoneyyBox;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cubetechnology-gautam.MoneyyBox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -665,7 +691,7 @@
 				F94DE1662184C05A001C9DEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F94DE1672184C05A001C9DEE /* Build configuration list for PBXNativeTarget "MoneyyBox" */ = {
 			isa = XCConfigurationList;
@@ -674,7 +700,7 @@
 				F94DE1692184C05A001C9DEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

@@ -11,4 +11,5 @@ target 'MoneyyBox' do
     pod 'SwiftyJSON'
     pod 'Toast-Swift', '~> 2.0.0'
     pod 'GoogleMaps'
+    pod 'AppCenter'
 end

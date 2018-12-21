@@ -6,89 +6,78 @@
 //  Copyright © 2018 FH. All rights reserved.
 //
 
-import UIKit
+import Foundation
 //import GoogleMaps
 import CoreLocation
 import MapKit
 
-class HomeVC: BaseViewController , CLLocationManagerDelegate, MKMapViewDelegate {
+class HomeVC: BaseViewController  {
 
-    @IBOutlet weak var displayView: UIView!
-    private var locations: [MKPointAnnotation] = []
-    @IBOutlet weak var btnTracking: UIButton!
     
     @IBOutlet weak var mapView: MKMapView!
     
-//    lazy var geocoder = CLGeocoder()
-    var locationManager = CLLocationManager()
-    let authorizationStatus = CLLocationManager.authorizationStatus()
-
-    override func viewDidLoad()
-    {
+    @IBOutlet weak var distanceCount: UILabel!
+    var counter: Float = 0.00
+    var setPoint: Int = 0
+    var counterUpdated: Float = 0.00
+    let defaults = UserDefaults.standard
+    
+    
+    
+    override func viewDidLoad() {
+        let auth = self.defaults.bool(forKey: LOGGED_IN_KEY)
+        
         super.viewDidLoad()
-        
-        
-        displayView.layer.cornerRadius = 1
-        displayView.layer.borderColor = UIColor.lightGray.cgColor
-        displayView.layer.masksToBounds = true
-        displayView.layer.borderWidth = 0.5
-
-//        btnStartJourneyOutlet.layer.cornerRadius = 5
-//        btnStartJourneyOutlet.layer.masksToBounds = true
-//        btnStartJourneyOutlet.layer.borderWidth = 0.5
-        
-        
-        locationManager.delegate = self
-        if authorizationStatus == .notDetermined{
-            locationManager.requestAlwaysAuthorization()
-        }else{
-            return
+        if !auth{
+            let login = LoginVC()
+            login.modalPresentationStyle = .custom
         }
-//        locationManager.requestWhenInUseAuthorization()
-//        locationManager.requestAlwaysAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.allowsBackgroundLocationUpdates = true
+        mapView.userTrackingMode = .follow
+        let annotations = LocationsStorage.shared.locations.map { annotationForLocation($0) }
+        mapView.addAnnotations(annotations)
         
-
-    }
-
-    @IBAction func btnStartTracking(_ sender: UIButton) {
-        
-        locationManager.startUpdatingLocation()
+        NotificationCenter.default.addObserver(self, selector: #selector(newLocationAdded(_:)), name: .newLocationSaved, object: nil)
         
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations)
-        guard let mostRecentLocation = locations.last else {
-            return
-        }
-        
-        // Add another annotation to the map.
+    
+    
+    func annotationForLocation(_ location: Location) -> MKAnnotation {
         let annotation = MKPointAnnotation()
-        annotation.coordinate = mostRecentLocation.coordinate
-        
-        // Also add to our map so we can remove old values later
-        self.locations.append(annotation)
-        
-        // Remove values if the array is too big
-        while locations.count > 100 {
-            let annotationToRemove = self.locations.first!
-            self.locations.remove(at: 0)
-            
-            // Also remove from the map
-            mapView.removeAnnotation(annotationToRemove)
+        annotation.title = location.dateString
+        annotation.coordinate = location.coordinates
+        if setPoint == 0 {
+            setPoint = 1
+        }else if setPoint == 1{
+            counter = counter + 500.00
         }
         
-        if UIApplication.shared.applicationState == .active {
-            mapView.showAnnotations(self.locations, animated: true)
-        } else {
-            print("App is backgrounded. New location is %@", mostRecentLocation)
-        }
+        
+        counterUpdated = counter/1609.344
+        counterUpdated = roundf(counterUpdated * 100) / 100
+        self.distanceCount.text = String(counterUpdated)+" - Miles"
+        
+        return annotation
     }
+   func mapView(_mapView: MKMapView, rendererFor overlay:MKOverlay) -> MKOverlayRenderer! {
+        if(overlay is MKPolyline) {
+            let render = MKPolylineRenderer(overlay: overlay)
+            render.strokeColor = UIColor.blue.withAlphaComponent(0.5)
+            render.lineWidth = 3
+            return render
+        }
+        return nil
+        }
+    
+    @objc func newLocationAdded(_ notification: Notification) {
+        guard let location = notification.userInfo?["location"] as? Location else {
+            return
+        }
         
-    
-    
-    
+        let annotation = annotationForLocation(location)
+        mapView.addAnnotation(annotation)
+        
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

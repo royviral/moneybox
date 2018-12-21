@@ -22,16 +22,19 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var btnLoginOutlet: UIButton!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         btnLoginOutlet.layer.cornerRadius = 3.0
+        self.spinner.isHidden = true
         
     }
 
     @IBAction func btnLoginClick(_ sender: UIButton)
     {
+        
        if (txtUserName.text?.isEmpty)!
         {
             let alertVC = CPAlertVC.create().config(title: "Alert", message: "Please enter username")
@@ -54,6 +57,9 @@ class LoginVC: UIViewController {
         }
         else
         {
+            self.spinner.isHidden = false
+            self.spinner.startAnimating()
+            
             let parameters = [
                 "email": txtUserName.text!,
                 "password": txtPassword.text!
@@ -71,9 +77,19 @@ class LoginVC: UIViewController {
 
                     if responseCode == 200
                     {
+                        
+                        let defaults = UserDefaults.standard
+                        defaults.set(JsonData["token"] , forKey: "TOKEN")
+                        defaults.set(JsonData["first_name"], forKey: "USER_EMAIL")
+                        defaults.set(true, forKey: "LOGGED_IN_KEY")
+                        defaults.synchronize()
+                        
+                        
                         self.view.makeToast("Login Successfull", duration: 1.0, position: .bottom)
-
+                        self.spinner.isHidden = true
+                        self.spinner.stopAnimating()
                         let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                        
                         self.navigationController?.pushViewController(loginVC, animated: true)
                     }
                     else
@@ -84,13 +100,17 @@ class LoginVC: UIViewController {
                             
                             
                         }))
+                        self.spinner.isHidden = true
+                        self.spinner.stopAnimating()
                         
                         alertVC.show(into: self)
                     }
                     
                 case .failure(let error):
-                    
+                    self.spinner.isHidden = true
+                    self.spinner.stopAnimating()
                     print(error)
+                    return
                 }
             }
         }
