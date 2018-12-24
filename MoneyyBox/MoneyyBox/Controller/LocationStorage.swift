@@ -41,11 +41,11 @@ class LocationsStorage {
     }
     
     func saveLocationOnDisk(_ location: Location) {
-        let encoder = JSONEncoder()
-        let timestamp = location.date.timeIntervalSince1970
-        let fileURL = documentsURL.appendingPathComponent("\(timestamp)")
+//        let encoder = JSONEncoder()
+//        let timestamp = location.date.timeIntervalSince1970
+//        let fileURL = documentsURL.appendingPathComponent("\(timestamp)")
         
-        let data = try! encoder.encode(location)
+//        let data = try! encoder.encode(location)
         //send post request
 //        let email = user
         
@@ -90,7 +90,7 @@ class LocationsStorage {
                     print(error)
                 }
             }
-        try! data.write(to: fileURL)
+//        try! data.write(to: fileURL)
         
         locations.append(location)
         

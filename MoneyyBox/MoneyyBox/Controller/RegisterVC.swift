@@ -31,11 +31,13 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var txtIFSCCode: UITextField!
     @IBOutlet weak var btnsubmit: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
       
         btnsubmit.layer.cornerRadius = 3
+        
 
     }
 
@@ -49,7 +51,7 @@ class RegisterVC: UIViewController {
             txtEmailID.layer.borderColor = UIColor.red.cgColor
         }else{
             txtEmailID.layer.borderColor = UIColor.white.cgColor
-
+            isTrue = true
         }
          if (txtPassword.text?.isEmpty)!
         {
@@ -58,7 +60,7 @@ class RegisterVC: UIViewController {
             isTrue = false
          }else{
             txtPassword.layer.borderColor = UIColor.white.cgColor
-            
+            isTrue = true
         }
          if (txtConfirmedPassword.text?.isEmpty)!
         {
@@ -67,7 +69,7 @@ class RegisterVC: UIViewController {
             isTrue = false
          }else{
             txtConfirmedPassword.layer.borderColor = UIColor.white.cgColor
-            
+            isTrue = true
         }
          if (txtName.text?.isEmpty)!
         {
@@ -76,7 +78,7 @@ class RegisterVC: UIViewController {
             isTrue = false
          }else{
             txtName.layer.borderColor = UIColor.white.cgColor
-            
+            isTrue = true
         }
         if (txtPhoneNo.text?.isEmpty)!
         {
@@ -85,7 +87,7 @@ class RegisterVC: UIViewController {
             isTrue = false
         }else{
             txtPhoneNo.layer.borderColor = UIColor.white.cgColor
-            
+            isTrue = true
         }
         if !isTrue{
             
@@ -161,15 +163,12 @@ class RegisterVC: UIViewController {
           
         }
     }
-    
+
     @IBAction func btnBackClick(_ sender: UIButton)
     {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
+
 }

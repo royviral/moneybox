@@ -67,14 +67,14 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             
             break
         case 6:
-            print(auth)
+            
             if auth{
                 self.defaults.set("" , forKey: "TOKEN")
                 self.defaults.set("", forKey: "USER_EMAIL")
                 self.defaults.set(false, forKey: "LOGGED_IN_KEY")
             
             }
-            print(auth)
+            
             self.openViewControllerBasedOnIdentifier("LoginVC")
             break
             
@@ -89,7 +89,8 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
         if (topViewController.restorationIdentifier == destViewController.restorationIdentifier){
-            print("Same VC")
+            
+            
             self.navigationController!.pushViewController(destViewController, animated: true)
         } else {
             self.navigationController!.pushViewController(destViewController, animated: true)

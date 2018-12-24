@@ -29,6 +29,12 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        let auth = self.defaults.bool(forKey: "LOGGED_IN_KEY")
+        
+        if auth{
+            let home = HomeVC()
+            home.modalPresentationStyle = .custom
+        }
         btnLoginOutlet.layer.cornerRadius = 3.0
         self.spinner.isHidden = true
         

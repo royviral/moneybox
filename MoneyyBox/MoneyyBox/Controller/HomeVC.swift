@@ -42,13 +42,17 @@ class HomeVC: BaseViewController  {
         annotation.coordinate = location.coordinates
         if setPoint == 0 {
             setPoint = 1
-        }else if setPoint == 1{
+        }
+        if setPoint == 2{
             counter = counter + 500.00
+        }else if setPoint == 1{
+            setPoint = 2
         }
         
         
         counterUpdated = counter/1609.344
-        counterUpdated = roundf(counterUpdated * 100) / 100
+//        counterUpdated = roundf(counterUpdated * 100) / 100
+        
         self.distanceCount.text = String(counterUpdated)+" - Miles"
         
         return annotation
@@ -84,8 +88,4 @@ class HomeVC: BaseViewController  {
         onSlideMenuButtonPressed(sender)
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
 }
