@@ -44,54 +44,67 @@ class RegisterVC: UIViewController {
     @IBAction func btnSubmitClick(_ sender: UIButton)
     {
         
-        var isTrue = false
+        var isTrue = ""
         if (txtEmailID.text?.isEmpty)!
         {
             txtEmailID.layer.borderWidth = 1
             txtEmailID.layer.borderColor = UIColor.red.cgColor
+            isTrue = "error"
         }else{
             txtEmailID.layer.borderColor = UIColor.white.cgColor
-            isTrue = true
+            
         }
          if (txtPassword.text?.isEmpty)!
         {
             txtPassword.layer.borderWidth = 1
             txtPassword.layer.borderColor = UIColor.red.cgColor
-            isTrue = false
+            isTrue = "error"
          }else{
             txtPassword.layer.borderColor = UIColor.white.cgColor
-            isTrue = true
+           
         }
          if (txtConfirmedPassword.text?.isEmpty)!
         {
             txtConfirmedPassword.layer.borderWidth = 1
             txtConfirmedPassword.layer.borderColor = UIColor.red.cgColor
-            isTrue = false
+            isTrue = "error"
          }else{
+            if txtPassword.text == txtConfirmedPassword.text{
+                
+                let alertVC = CPAlertVC.create().config(title: "Alert", message: "Password not matched.")
+                
+                alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
+                    
+                }))
+                
+                alertVC.show(into: self)
+                return
+            }
+            
             txtConfirmedPassword.layer.borderColor = UIColor.white.cgColor
-            isTrue = true
+            
         }
          if (txtName.text?.isEmpty)!
         {
             txtName.layer.borderWidth = 1
             txtName.layer.borderColor = UIColor.red.cgColor
-            isTrue = false
+            isTrue = "error"
          }else{
             txtName.layer.borderColor = UIColor.white.cgColor
-            isTrue = true
+            
         }
         if (txtPhoneNo.text?.isEmpty)!
         {
             txtPhoneNo.layer.borderWidth = 1
             txtPhoneNo.layer.borderColor = UIColor.red.cgColor
-            isTrue = false
+            isTrue = "error"
         }else{
             txtPhoneNo.layer.borderColor = UIColor.white.cgColor
-            isTrue = true
-        }
-        if !isTrue{
             
-            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Selected Fields are required.")
+        }
+        if isTrue != ""{
+            
+            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Requested Fields are required.")
             
             alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
                 
@@ -106,13 +119,6 @@ class RegisterVC: UIViewController {
                 "password": txtPassword.text!,
                 "name": txtName.text!,
                 "phone_no": txtPhoneNo.text!,
-                "address1": "",
-                "address2": "",
-                "town": "",
-                "city":"",
-                "provision": "",
-                "country": "",
-                "postal_code": "",
                 "bank_acc_no": txtBankaccNumber.text!,
                 "bank_name": txtBankName.text!,
                 "bank_ifsc_code": txtIFSCCode.text!,
