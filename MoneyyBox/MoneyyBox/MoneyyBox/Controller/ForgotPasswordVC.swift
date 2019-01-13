@@ -19,6 +19,7 @@ class ForgotPasswordVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnsubmit.layer.cornerRadius = 3
+        self.hideKeyboardTappedArround()
     }
 
     @IBAction func btnForgotPasswordSubmit(_ sender: Any) {

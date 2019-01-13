@@ -19,6 +19,7 @@ class LocationsStorage {
     private let fileManager: FileManager
     private let documentsURL: URL
     
+    
     init() {
         let fileManager = FileManager.default
         documentsURL = try! fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -40,36 +41,34 @@ class LocationsStorage {
     }
     
     func saveLocationOnDisk(_ location: Location) {
-        let encoder = JSONEncoder()
-        let timestamp = location.date.timeIntervalSince1970
-        let fileURL = documentsURL.appendingPathComponent("\(timestamp)")
+//        let encoder = JSONEncoder()
+//        let timestamp = location.date.timeIntervalSince1970
+//        let fileURL = documentsURL.appendingPathComponent("\(timestamp)")
         
-        let data = try! encoder.encode(location)
+//        let data = try! encoder.encode(location)
         //send post request
 //        let email = user
         
         
-        let auth = self.defaults.bool(forKey: "LOGGED_IN_KEY")
-        let user_email = ""
-        if auth{
-            let user_email = self.defaults.string(forKey: "TOKEN")  ?? ""
-        }else{
-            
+        let auth = defaults.bool(forKey: "LOGGED_IN_KEY")
+        let userEmail = defaults.value(forKey: "USER_EMAIL") as? String ?? ""
+        let userToken = defaults.value(forKey: "TOKEN") as? String ?? ""
+        if !auth && userEmail == ""{
             return
         }
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier:"en_US")
         dateFormatter.setLocalizedDateFormatFromTemplate("MM-dd-yyyy HH:mm:ss")
         let new_date_formate = dateFormatter.string(from: location.date)
-        print(new_date_formate)
-        print(user_email)
+        
         let parameters: [String: Any] = [
-            "email": user_email,
             "latitude": location.latitude ,
             "longitude": location.longitude ,
             "date": new_date_formate,
             "date_string": location.dateString,
-            "description": location.description
+            "description": location.description,
+            "email": userEmail as String,
+            "token": userToken as String
             ]
         
         Alamofire.request("http://3anglesadvertising.com/api/index.php/auth/insert_user_location", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
@@ -77,7 +76,7 @@ class LocationsStorage {
             switch response.result
             {
                 case .success:
-  
+                    
                     let responseJSON = response.result.value as! [String:AnyObject]
                     let JsonData = responseJSON["data"] as! [String:AnyObject]
                     let responseCode = JsonData["response_code"] as! Int
@@ -91,7 +90,7 @@ class LocationsStorage {
                     print(error)
                 }
             }
-        try! data.write(to: fileURL)
+//        try! data.write(to: fileURL)
         
         locations.append(location)
         

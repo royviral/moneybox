@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Toast_Swift
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var vwEmail: UIView!
     @IBOutlet weak var vwPassword: UIView!
@@ -37,8 +37,27 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
       
         btnsubmit.layer.cornerRadius = 3
+        txtEmailID.delegate = self
+        txtPassword.delegate = self
+        txtConfirmedPassword.delegate = self
+        txtName.delegate = self
+        txtPhoneNo.delegate = self
+        txtBankaccNumber.delegate = self
+        txtBankName.delegate = self
+        txtIFSCCode.delegate = self
         
 
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        txtEmailID.resignFirstResponder()
+        txtPassword.resignFirstResponder()
+        txtConfirmedPassword.resignFirstResponder()
+        txtName.resignFirstResponder()
+        txtPhoneNo.resignFirstResponder()
+        txtBankaccNumber.resignFirstResponder()
+        txtBankName.resignFirstResponder()
+        txtIFSCCode.resignFirstResponder()
+        return true
     }
 
     @IBAction func btnSubmitClick(_ sender: UIButton)

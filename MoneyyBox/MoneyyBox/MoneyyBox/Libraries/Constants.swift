@@ -14,3 +14,4 @@ typealias completionHandler = (_ Success: Bool) -> ()
 let TOKEN = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
+let DISTANCE: Float = 0.00

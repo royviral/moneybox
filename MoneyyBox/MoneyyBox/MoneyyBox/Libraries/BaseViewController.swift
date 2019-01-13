@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController, SlideMenuDelegate   {
     
-    let Session = UserDefaults.standard
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad()
     {
@@ -26,14 +26,25 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
     {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \(index) \n", terminator: "")
-        
+        let auth = self.defaults.bool(forKey: "LOGGED_IN_KEY")
         switch(index){
         case 0:
-             self.openViewControllerBasedOnIdentifier("HomeVC")
+            if auth{
+                self.openViewControllerBasedOnIdentifier("HomeVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
             break
             
         case 1:
-            self.openViewControllerBasedOnIdentifier("UserProfileVC")
+            
+            
+            if auth{
+                self.openViewControllerBasedOnIdentifier("UserProfileVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
+            
             break
             
         case 2:
@@ -44,7 +55,12 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             break
             
         case 4:
-            self.openViewControllerBasedOnIdentifier("UserChangePasswordVC")
+            
+            if auth{
+                self.openViewControllerBasedOnIdentifier("UserChangePasswordVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
             break
             
         case 5:
@@ -52,8 +68,14 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             break
         case 6:
             
+            if auth{
+                self.defaults.set("" , forKey: "TOKEN")
+                self.defaults.set("", forKey: "USER_EMAIL")
+                self.defaults.set(false, forKey: "LOGGED_IN_KEY")
             
+            }
             
+            self.openViewControllerBasedOnIdentifier("LoginVC")
             break
             
         default:
@@ -67,7 +89,9 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
         if (topViewController.restorationIdentifier == destViewController.restorationIdentifier){
-            print("Same VC")
+            
+            
+            self.navigationController!.pushViewController(destViewController, animated: true)
         } else {
             self.navigationController!.pushViewController(destViewController, animated: true)
         }

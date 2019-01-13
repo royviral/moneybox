@@ -11,7 +11,7 @@ import Toast_Swift
 import Alamofire
 import SwiftyJSON
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var vwUserName: UIView!
@@ -24,12 +24,28 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
 
+        super.viewDidLoad()
+        txtUserName.delegate = self
+        txtPassword.delegate = self
+        self.hideKeyboardTappedArround()
+        let auth = self.defaults.bool(forKey: "LOGGED_IN_KEY")
+        
+        if auth{
+            let home = HomeVC()
+            home.modalPresentationStyle = .custom
+        }
         btnLoginOutlet.layer.cornerRadius = 3.0
         self.spinner.isHidden = true
         
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        txtUserName.resignFirstResponder()
+        txtPassword.resignFirstResponder()
+        return true
     }
 
     @IBAction func btnLoginClick(_ sender: UIButton)
@@ -77,10 +93,11 @@ class LoginVC: UIViewController {
 
                     if responseCode == 200
                     {
-                        
+                        let json_email = JsonData["first_name"] as? String ?? ""
+                        let json_token = JsonData["token"] as? String ?? ""
                         let defaults = UserDefaults.standard
-                        defaults.set(JsonData["token"] , forKey: "TOKEN")
-                        defaults.set(JsonData["first_name"], forKey: "USER_EMAIL")
+                        defaults.set(json_token , forKey: "TOKEN")
+                        defaults.set(json_email, forKey: "USER_EMAIL")
                         defaults.set(true, forKey: "LOGGED_IN_KEY")
                         defaults.synchronize()
                         

@@ -20,16 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     static let geoCoder = CLGeocoder()
-    let center = UNUserNotificationCenter.current()
+//    let center = UNUserNotificationCenter.current()
     let locationManager = CLLocationManager()
     let defaults = UserDefaults.standard
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         let moneybox = UIColor(red: 0/255, green: 104/255, blue: 55/255, alpha: 1)
         UITabBar.appearance().tintColor = moneybox
-        
-        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
-        }
+        IQKeyboardManager.shared.enable = true
+//        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+//        }
         locationManager.requestAlwaysAuthorization()
         
         locationManager.startMonitoringVisits()
@@ -42,14 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        locationManager.startUpdatingLocation()  // 2
         
         locationManager.startMonitoringSignificantLocationChanges()
-        let auth = self.defaults.bool(forKey: LOGGED_IN_KEY)
-        print(auth)
+        let auth = self.defaults.bool(forKey: "LOGGED_IN_KEY")
+        
         if auth{
-            
             let home = HomeVC()
             home.modalPresentationStyle = .custom
-            
-            
         }
         return true
     }
@@ -76,17 +73,17 @@ extension AppDelegate: CLLocationManagerDelegate {
         LocationsStorage.shared.saveLocationOnDisk(location)
 //        print(location.date)
         
-        let content = UNMutableNotificationContent()
-        content.title = "New Entry Point added 📌"
-        content.body = location.description
-        content.sound = UNNotificationSound.default()
+//        let content = UNMutableNotificationContent()
+//        content.title = "New Entry Point added 📌"
+//        content.body = location.description
+//        content.sound = UNNotificationSound.default()
         
 //        print(content)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let request = UNNotificationRequest(identifier: location.dateString, content: content, trigger: trigger)
-
-        center.add(request, withCompletionHandler: nil)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//        let request = UNNotificationRequest(identifier: location.dateString, content: content, trigger: trigger)
+//
+//        center.add(request, withCompletionHandler: nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

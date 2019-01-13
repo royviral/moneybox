@@ -12,6 +12,7 @@ class ChangePasswordVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardTappedArround()
    
     }
 

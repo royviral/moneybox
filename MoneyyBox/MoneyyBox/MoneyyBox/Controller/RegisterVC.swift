@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Toast_Swift
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var vwEmail: UIView!
     @IBOutlet weak var vwPassword: UIView!
@@ -31,59 +31,101 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var txtIFSCCode: UITextField!
     @IBOutlet weak var btnsubmit: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
       
         btnsubmit.layer.cornerRadius = 3
+        txtEmailID.delegate = self
+        txtPassword.delegate = self
+        txtConfirmedPassword.delegate = self
+        txtName.delegate = self
+        txtPhoneNo.delegate = self
+        txtBankaccNumber.delegate = self
+        txtBankName.delegate = self
+        txtIFSCCode.delegate = self
+        self.hideKeyboardTappedArround()
+        
 
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        txtEmailID.resignFirstResponder()
+        txtPassword.resignFirstResponder()
+        txtConfirmedPassword.resignFirstResponder()
+        txtName.resignFirstResponder()
+        txtPhoneNo.resignFirstResponder()
+        txtBankaccNumber.resignFirstResponder()
+        txtBankName.resignFirstResponder()
+        txtIFSCCode.resignFirstResponder()
+        return true
     }
 
     @IBAction func btnSubmitClick(_ sender: UIButton)
     {
+        
+        var isTrue = ""
         if (txtEmailID.text?.isEmpty)!
         {
-            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Please enter email ID")
+            txtEmailID.layer.borderWidth = 1
+            txtEmailID.layer.borderColor = UIColor.red.cgColor
+            isTrue = "error"
+        }else{
+            txtEmailID.layer.borderColor = UIColor.white.cgColor
             
-            alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
-                
-            }))
-            
-            alertVC.show(into: self)
         }
-        else if (txtPassword.text?.isEmpty)!
+         if (txtPassword.text?.isEmpty)!
         {
-            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Please enter password")
-            
-            alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
-                
-            }))
-            
-            alertVC.show(into: self)
+            txtPassword.layer.borderWidth = 1
+            txtPassword.layer.borderColor = UIColor.red.cgColor
+            isTrue = "error"
+         }else{
+            txtPassword.layer.borderColor = UIColor.white.cgColor
+           
         }
-        else if (txtConfirmedPassword.text?.isEmpty)!
+         if (txtConfirmedPassword.text?.isEmpty)!
         {
-            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Please enter confirmed password")
-            
-            alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
+            txtConfirmedPassword.layer.borderWidth = 1
+            txtConfirmedPassword.layer.borderColor = UIColor.red.cgColor
+            isTrue = "error"
+         }else{
+            if txtPassword.text == txtConfirmedPassword.text{
                 
-            }))
-            
-            alertVC.show(into: self)
-        }
-        else if (txtName.text?.isEmpty)!
-        {
-            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Please enter your name")
-            
-            alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
+                let alertVC = CPAlertVC.create().config(title: "Alert", message: "Password not matched.")
                 
-            }))
+                alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
+                    
+                }))
+                
+                alertVC.show(into: self)
+                return
+            }
             
-            alertVC.show(into: self)
+            txtConfirmedPassword.layer.borderColor = UIColor.white.cgColor
+            
         }
-        else if (txtPhoneNo.text?.isEmpty)!
+         if (txtName.text?.isEmpty)!
         {
-            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Please enter phone number")
+            txtName.layer.borderWidth = 1
+            txtName.layer.borderColor = UIColor.red.cgColor
+            isTrue = "error"
+         }else{
+            txtName.layer.borderColor = UIColor.white.cgColor
+            
+        }
+        if (txtPhoneNo.text?.isEmpty)!
+        {
+            txtPhoneNo.layer.borderWidth = 1
+            txtPhoneNo.layer.borderColor = UIColor.red.cgColor
+            isTrue = "error"
+        }else{
+            txtPhoneNo.layer.borderColor = UIColor.white.cgColor
+            
+        }
+        if isTrue != ""{
+            
+            let alertVC = CPAlertVC.create().config(title: "Alert", message: "Requested Fields are required.")
             
             alertVC.addAction(CPAlertAction(title: "Ok", type: .normal, handler: {
                 
@@ -98,13 +140,6 @@ class RegisterVC: UIViewController {
                 "password": txtPassword.text!,
                 "name": txtName.text!,
                 "phone_no": txtPhoneNo.text!,
-                "address1": "",
-                "address2": "",
-                "town": "",
-                "city":"",
-                "provision": "",
-                "country": "",
-                "postal_code": "",
                 "bank_acc_no": txtBankaccNumber.text!,
                 "bank_name": txtBankName.text!,
                 "bank_ifsc_code": txtIFSCCode.text!,
@@ -155,15 +190,24 @@ class RegisterVC: UIViewController {
           
         }
     }
-    
+
     @IBAction func btnBackClick(_ sender: UIButton)
     {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
+
+}
+extension UIViewController{
+    func hideKeyboardTappedArround()  {
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
 }

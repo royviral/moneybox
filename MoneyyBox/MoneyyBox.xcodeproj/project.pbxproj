@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9FCB429A54A32A1F78F4071E /* Pods_MoneyyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AE6E95C61DC56743EFC8B1 /* Pods_MoneyyBox.framework */; };
+		E03908DA21D76B9700BFBB6E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03908D921D76B9700BFBB6E /* StoreKit.framework */; };
 		E048BDBB21BEB1B200C39A09 /* UserChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048BDBA21BEB1B200C39A09 /* UserChangePasswordVC.swift */; };
+		E0BD9F9321D8C1BB007132D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0BD9F9221D8C1BB007132D4 /* Assets.xcassets */; };
 		E0CA96E321C644E3006D0F3B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CA96E221C644E3006D0F3B /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E0EC5F1021BCE0CF00B8C3BF /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */; };
 		E0F2D0E221C7C021006D2484 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2D0E121C7C021006D2484 /* Constants.swift */; };
@@ -33,7 +35,6 @@
 		F94DE1562184C053001C9DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94DE1552184C053001C9DEE /* AppDelegate.swift */; };
 		F94DE15B2184C053001C9DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1592184C053001C9DEE /* Main.storyboard */; };
 		F94DE15E2184C053001C9DEE /* MoneyyBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F94DE15C2184C053001C9DEE /* MoneyyBox.xcdatamodeld */; };
-		F94DE1602184C05A001C9DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94DE15F2184C05A001C9DEE /* Assets.xcassets */; };
 		F94DE1632184C05A001C9DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1612184C05A001C9DEE /* LaunchScreen.storyboard */; };
 		F94DE1722184C13B001C9DEE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94DE1712184C13B001C9DEE /* LoginVC.swift */; };
 		F94DE1742184C14B001C9DEE /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94DE1732184C14B001C9DEE /* RegisterVC.swift */; };
@@ -67,7 +68,9 @@
 
 /* Begin PBXFileReference section */
 		401904A3EEE629B4C174B12C /* Pods-MoneyyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyyBox/Pods-MoneyyBox.debug.xcconfig"; sourceTree = "<group>"; };
+		E03908D921D76B9700BFBB6E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E048BDBA21BEB1B200C39A09 /* UserChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChangePasswordVC.swift; sourceTree = "<group>"; };
+		E0BD9F9221D8C1BB007132D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CA96E221C644E3006D0F3B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D9879A21C6434F00ED07C2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		F94DE1552184C053001C9DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94DE15A2184C053001C9DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F94DE15D2184C053001C9DEE /* MoneyyBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyyBox.xcdatamodel; sourceTree = "<group>"; };
-		F94DE15F2184C05A001C9DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F94DE1622184C05A001C9DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F94DE1642184C05A001C9DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F94DE1712184C13B001C9DEE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				E0CA96E321C644E3006D0F3B /* Alamofire.framework in Frameworks */,
 				F9159EAC21A0455A001439BC /* CoreLocation.framework in Frameworks */,
 				9FCB429A54A32A1F78F4071E /* Pods_MoneyyBox.framework in Frameworks */,
+				E03908DA21D76B9700BFBB6E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,7 @@
 		2065B972FE77454ECAC00517 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E03908D921D76B9700BFBB6E /* StoreKit.framework */,
 				E0CA96E221C644E3006D0F3B /* Alamofire.framework */,
 				E0D9879A21C6434F00ED07C2 /* Alamofire.framework */,
 				F9159EAB21A0455A001439BC /* CoreLocation.framework */,
@@ -189,7 +193,6 @@
 				F94DE16D2184C0F9001C9DEE /* Icon */,
 				F94DE16B2184C0EC001C9DEE /* View */,
 				F94DE16A2184C0E0001C9DEE /* Controller */,
-				F94DE15F2184C05A001C9DEE /* Assets.xcassets */,
 				F94DE17B2184C4B9001C9DEE /* Rajdhani-Bold.ttf */,
 				F94DE17A2184C4B8001C9DEE /* Rajdhani-Medium.ttf */,
 				F94DE1792184C4B7001C9DEE /* Rajdhani-Regular.ttf */,
@@ -197,6 +200,7 @@
 				F94DE1612184C05A001C9DEE /* LaunchScreen.storyboard */,
 				F94DE1642184C05A001C9DEE /* Info.plist */,
 				F94DE15C2184C053001C9DEE /* MoneyyBox.xcdatamodeld */,
+				E0BD9F9221D8C1BB007132D4 /* Assets.xcassets */,
 			);
 			path = MoneyyBox;
 			sourceTree = "<group>";
@@ -345,6 +349,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -376,6 +383,7 @@
 				F94DE1882184C792001C9DEE /* mylocation.png in Resources */,
 				F94DE1A52184E903001C9DEE /* menu1.png in Resources */,
 				F94DE1802184C4B9001C9DEE /* Rajdhani-SemiBold.ttf in Resources */,
+				E0BD9F9321D8C1BB007132D4 /* Assets.xcassets in Resources */,
 				F94DE1A42184E903001C9DEE /* menu.png in Resources */,
 				F94DE1952184C7E5001C9DEE /* loginicon.png in Resources */,
 				F94DE18A2184C792001C9DEE /* history.png in Resources */,
@@ -393,7 +401,6 @@
 				F94DE18B2184C792001C9DEE /* logout.png in Resources */,
 				F9159EC921A1303E001439BC /* marker.png in Resources */,
 				F9159EBF21A12EB2001439BC /* tv.png in Resources */,
-				F94DE1602184C05A001C9DEE /* Assets.xcassets in Resources */,
 				F94DE1932184C7CD001C9DEE /* logo.png in Resources */,
 				F9159EAE21A04C29001439BC /* blueNav.png in Resources */,
 				F9159EBB21A12E87001439BC /* sv@2x.png in Resources */,
@@ -644,18 +651,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8GXM322EVJ;
+				DEVELOPMENT_TEAM = YZY7DLX7BW;
 				INFOPLIST_FILE = MoneyyBox/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cubetechnology-gautam.MoneyyBox";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3angles.Moneyybox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -666,18 +673,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8GXM322EVJ;
+				DEVELOPMENT_TEAM = YZY7DLX7BW;
 				INFOPLIST_FILE = MoneyyBox/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cubetechnology-gautam.MoneyyBox";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3angles.Moneyybox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

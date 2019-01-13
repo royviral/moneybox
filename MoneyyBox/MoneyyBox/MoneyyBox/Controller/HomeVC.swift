@@ -20,18 +20,13 @@ class HomeVC: BaseViewController  {
     var counter: Float = 0.00
     var setPoint: Int = 0
     var counterUpdated: Float = 0.00
-    let defaults = UserDefaults.standard
-    
     
     
     override func viewDidLoad() {
-        let auth = self.defaults.bool(forKey: LOGGED_IN_KEY)
         
         super.viewDidLoad()
-        if !auth{
-            let login = LoginVC()
-            login.modalPresentationStyle = .custom
-        }
+        
+        
         mapView.userTrackingMode = .follow
         let annotations = LocationsStorage.shared.locations.map { annotationForLocation($0) }
         mapView.addAnnotations(annotations)
@@ -47,13 +42,17 @@ class HomeVC: BaseViewController  {
         annotation.coordinate = location.coordinates
         if setPoint == 0 {
             setPoint = 1
-        }else if setPoint == 1{
+        }
+        if setPoint == 2{
             counter = counter + 500.00
+        }else if setPoint == 1{
+            setPoint = 2
         }
         
         
         counterUpdated = counter/1609.344
-        counterUpdated = roundf(counterUpdated * 100) / 100
+//        counterUpdated = roundf(counterUpdated * 100) / 100
+        
         self.distanceCount.text = String(counterUpdated)+" - Miles"
         
         return annotation
@@ -89,8 +88,4 @@ class HomeVC: BaseViewController  {
         onSlideMenuButtonPressed(sender)
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
 }
