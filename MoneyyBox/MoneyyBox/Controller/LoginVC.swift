@@ -11,7 +11,7 @@ import Toast_Swift
 import Alamofire
 import SwiftyJSON
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var vwUserName: UIView!
@@ -29,6 +29,9 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        txtUserName.delegate = self
+        txtPassword.delegate = self
+        self.hideKeyboardTappedArround()
         let auth = self.defaults.bool(forKey: "LOGGED_IN_KEY")
         
         if auth{
@@ -38,6 +41,11 @@ class LoginVC: UIViewController {
         btnLoginOutlet.layer.cornerRadius = 3.0
         self.spinner.isHidden = true
         
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        txtUserName.resignFirstResponder()
+        txtPassword.resignFirstResponder()
+        return true
     }
 
     @IBAction func btnLoginClick(_ sender: UIButton)

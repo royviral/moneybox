@@ -23,7 +23,7 @@ class UserProfileVC: BaseViewController{
         super.viewDidLoad()
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 //        self.view.addGestureRecognizer(tap)
-        
+        self.hideKeyboardTappedArround()
         let auth = defaults.bool(forKey: "LOGGED_IN_KEY")
         let userEmail = defaults.value(forKey: "USER_EMAIL") as? String ?? ""
         let userToken = defaults.value(forKey: "TOKEN") as? String ?? ""
@@ -114,7 +114,7 @@ class UserProfileVC: BaseViewController{
                 "bank_ifsc_code": bnkIfscCode.text!,
                 "token": defaults.value(forKey: "TOKEN") as? String ?? ""
                 ]
-            print(parameters)
+            
             
             Alamofire.request("http://3anglesadvertising.com/api/index.php/auth/update_user", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
                 
@@ -160,9 +160,6 @@ class UserProfileVC: BaseViewController{
             }
             
         }
-    }
-    func dismissKeyboard(){
-        view.endEditing(true)
     }
     
     @IBAction func btnMenuClick(_ sender: UIButton) {

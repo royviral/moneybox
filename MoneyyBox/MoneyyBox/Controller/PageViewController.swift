@@ -105,9 +105,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         // User is on the last view controller and swiped right to loop to
         // the first view controller.
         guard orderedViewControllersCount != nextIndex else {
-            return orderedViewControllers.first
+//            return orderedViewControllers.first
             // Uncommment the line below, remove the line above if you don't want the page control to loop.
-            // return nil
+             return nil
         }
         
         guard orderedViewControllersCount > nextIndex else {

@@ -45,9 +45,11 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         txtBankaccNumber.delegate = self
         txtBankName.delegate = self
         txtIFSCCode.delegate = self
+        self.hideKeyboardTappedArround()
         
 
     }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         txtEmailID.resignFirstResponder()
         txtPassword.resignFirstResponder()
@@ -88,7 +90,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             txtConfirmedPassword.layer.borderColor = UIColor.red.cgColor
             isTrue = "error"
          }else{
-            if txtPassword.text == txtConfirmedPassword.text{
+            if txtPassword.text != txtConfirmedPassword.text{
                 
                 let alertVC = CPAlertVC.create().config(title: "Alert", message: "Password not matched.")
                 
@@ -196,4 +198,16 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
 
+}
+extension UIViewController{
+    func hideKeyboardTappedArround()  {
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
 }

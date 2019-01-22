@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController, SlideMenuDelegate   {
     
     let defaults = UserDefaults.standard
+    var imagePre: UIImage?
 
     override func viewDidLoad()
     {
@@ -48,14 +49,15 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             break
             
         case 2:
+            if auth{
+                self.openViewControllerBasedOnIdentifier("CamaraVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
+
             break
             
         case 3:
-            
-            break
-            
-        case 4:
-            
             if auth{
                 self.openViewControllerBasedOnIdentifier("UserChangePasswordVC")
             }else{
@@ -63,19 +65,22 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             }
             break
             
+        case 4:
+            if auth{
+                self.defaults.set("" , forKey: "TOKEN")
+                self.defaults.set("", forKey: "USER_EMAIL")
+                self.defaults.set(false, forKey: "LOGGED_IN_KEY")
+                
+            }
+            
+            self.openViewControllerBasedOnIdentifier("LoginVC")
+            break
+            
         case 5:
             
             break
         case 6:
             
-            if auth{
-                self.defaults.set("" , forKey: "TOKEN")
-                self.defaults.set("", forKey: "USER_EMAIL")
-                self.defaults.set(false, forKey: "LOGGED_IN_KEY")
-            
-            }
-            
-            self.openViewControllerBasedOnIdentifier("LoginVC")
             break
             
         default:

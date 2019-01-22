@@ -38,8 +38,8 @@ class HomeVC: BaseViewController  {
     
     func annotationForLocation(_ location: Location) -> MKAnnotation {
         let annotation = MKPointAnnotation()
-        annotation.title = location.dateString
-        annotation.coordinate = location.coordinates
+        //annotation.title = location.dateString
+        //annotation.coordinate = location.coordinates
         if setPoint == 0 {
             setPoint = 1
         }

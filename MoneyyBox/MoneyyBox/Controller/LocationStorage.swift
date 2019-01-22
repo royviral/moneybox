@@ -92,7 +92,7 @@ class LocationsStorage {
             }
 //        try! data.write(to: fileURL)
         
-        locations.append(location)
+        //locations.append(location)
         
         NotificationCenter.default.post(name: .newLocationSaved, object: self, userInfo: ["location": location])
     }

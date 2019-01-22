@@ -20,7 +20,7 @@ class UserChangePasswordVC: BaseViewController{
         super.viewDidLoad()
         let auth = defaults.bool(forKey: "LOGGED_IN_KEY")
         let userEmail = defaults.value(forKey: "USER_EMAIL") as? String ?? ""
-        
+        self.hideKeyboardTappedArround()
         if !auth && userEmail == ""{
             return
         }
