@@ -1494,7 +1494,26 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phl-14-SIk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-tr-tPN">
+                                        <rect key="frame" x="162.5" y="609" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mbY-Dg-7wI"/>
+                                            <constraint firstAttribute="width" constant="50" id="ne1-85-Ggq"/>
+                                        </constraints>
+                                        <state key="normal" image="iconfinder_Camera.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imageCapture:" destination="1V8-AI-Mrx" eventType="touchUpInside" id="JnJ-7I-nxp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TJf-tr-tPN" firstAttribute="centerX" secondItem="phl-14-SIk" secondAttribute="centerX" id="EFP-cR-v0P"/>
+                                    <constraint firstAttribute="bottom" secondItem="TJf-tr-tPN" secondAttribute="bottom" constant="8" id="ccW-Zg-wxj"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4j-aI-ivV">
                                 <rect key="frame" x="22" y="34" width="39" height="29"/>
@@ -1506,25 +1525,13 @@
                                     <action selector="closeCamara:" destination="1V8-AI-Mrx" eventType="touchUpInside" id="70L-Pu-wQP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-tr-tPN">
-                                <rect key="frame" x="172" y="617" width="30" height="30"/>
-                                <state key="normal" image="iconfinder_Camera.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="imageCapture:" destination="1V8-AI-Mrx" eventType="touchUpInside" id="JnJ-7I-nxp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="phl-14-SIk" firstAttribute="trailing" secondItem="GsP-tJ-eGA" secondAttribute="trailing" id="2Mv-NL-JEr"/>
-                            <constraint firstItem="TJf-tr-tPN" firstAttribute="leading" secondItem="GsP-tJ-eGA" secondAttribute="leading" constant="172" id="4TH-q1-U8a"/>
                             <constraint firstItem="phl-14-SIk" firstAttribute="bottom" secondItem="GsP-tJ-eGA" secondAttribute="bottom" id="60R-bT-Yfo"/>
                             <constraint firstItem="phl-14-SIk" firstAttribute="leading" secondItem="GsP-tJ-eGA" secondAttribute="leading" id="C4f-Gs-IxG"/>
                             <constraint firstItem="phl-14-SIk" firstAttribute="top" secondItem="8tk-N5-t4g" secondAttribute="top" id="c1N-yy-Iis"/>
-                            <constraint firstItem="GsP-tJ-eGA" firstAttribute="trailing" secondItem="TJf-tr-tPN" secondAttribute="trailing" constant="173" id="rQw-1R-1QV"/>
-                            <constraint firstItem="GsP-tJ-eGA" firstAttribute="bottom" secondItem="TJf-tr-tPN" secondAttribute="bottom" constant="20" id="x3w-8D-flf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GsP-tJ-eGA"/>
                     </view>
