@@ -67,6 +67,31 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             
         case 4:
             if auth{
+                self.openViewControllerBasedOnIdentifier("ContactVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
+            
+            break
+            
+        case 5:
+            if auth{
+                self.openViewControllerBasedOnIdentifier("HelpVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
+            
+            break
+        case 6:
+            if auth{
+                self.openViewControllerBasedOnIdentifier("ReferVC")
+            }else{
+                self.openViewControllerBasedOnIdentifier("LoginVC")
+            }
+            
+            break
+        case 7:
+            if auth{
                 self.defaults.set("" , forKey: "TOKEN")
                 self.defaults.set("", forKey: "USER_EMAIL")
                 self.defaults.set(false, forKey: "LOGGED_IN_KEY")
@@ -74,13 +99,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate   {
             }
             
             self.openViewControllerBasedOnIdentifier("LoginVC")
-            break
-            
-        case 5:
-            
-            break
-        case 6:
-            
             break
             
         default:

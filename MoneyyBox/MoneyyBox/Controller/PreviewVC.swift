@@ -79,8 +79,8 @@ class PreviewVC: BaseViewController, UINavigationControllerDelegate, UIImagePick
             let parameters = [
                 "email": defaults.value(forKey: "USER_EMAIL") as? String ?? "",
                 "token": defaults.value(forKey: "TOKEN") as? String ?? "",
-                "longitude": String(locValueLongitude) as? String ?? "",
-                "latitude": String(locValueLatitude) as? String ?? "",
+                "longitude": String(locValueLongitude),
+                "latitude": String(locValueLatitude),
                 "timestamp" : String(timestamp)
                 ]
             
@@ -101,10 +101,7 @@ class PreviewVC: BaseViewController, UINavigationControllerDelegate, UIImagePick
                     upload.responseJSON { response in
                         
                         //debugPrint(response.result.data.upload_data.file_name)
-                        let responseJSON = response.result.value as! [String:AnyObject]
-                        let JsonData = responseJSON["data"] as! [String:AnyObject]
-                        let responseCode = JsonData["response_code"] as! Int
-                        if responseCode == 200{
+                        
                             
                             let alertVC = CPAlertVC.create().config(title: "Success!", message: "Image uploaded successfully.")
                             
@@ -116,10 +113,6 @@ class PreviewVC: BaseViewController, UINavigationControllerDelegate, UIImagePick
                             }))
                             
                             alertVC.show(into: self)
-                            
-                        }
-                        
-                        
                         
                     }
                 case .failure(let encodingError):

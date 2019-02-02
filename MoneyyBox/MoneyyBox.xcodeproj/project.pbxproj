@@ -10,6 +10,14 @@
 		9FCB429A54A32A1F78F4071E /* Pods_MoneyyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AE6E95C61DC56743EFC8B1 /* Pods_MoneyyBox.framework */; };
 		E011FBD321F4FD9600763575 /* iconfinder_control-record-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = E011FBD221F4FD9400763575 /* iconfinder_control-record-circle.png */; };
 		E011FBD521F501EB00763575 /* iconfinder_Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E011FBD421F501E800763575 /* iconfinder_Camera.png */; };
+		E0214572220373B200F299E7 /* env.png in Resources */ = {isa = PBXBuildFile; fileRef = E021456D220373B100F299E7 /* env.png */; };
+		E0214573220373B200F299E7 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = E021456E220373B200F299E7 /* help.png */; };
+		E0214574220373B200F299E7 /* take_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = E021456F220373B200F299E7 /* take_photo.png */; };
+		E0214575220373B200F299E7 /* change_password.png in Resources */ = {isa = PBXBuildFile; fileRef = E0214570220373B200F299E7 /* change_password.png */; };
+		E0214576220373B200F299E7 /* refer.png in Resources */ = {isa = PBXBuildFile; fileRef = E0214571220373B200F299E7 /* refer.png */; };
+		E025598422019F0D00DEB684 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025598322019F0D00DEB684 /* ContactVC.swift */; };
+		E025598622019F2900DEB684 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025598522019F2900DEB684 /* HelpVC.swift */; };
+		E025598822019F4700DEB684 /* ReferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025598722019F4700DEB684 /* ReferVC.swift */; };
 		E03908DA21D76B9700BFBB6E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03908D921D76B9700BFBB6E /* StoreKit.framework */; };
 		E03B885921E4B50800F19FB8 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03B884321E4B50800F19FB8 /* IQTextView.swift */; };
 		E03B885A21E4B50800F19FB8 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03B884521E4B50800F19FB8 /* IQPreviousNextView.swift */; };
@@ -35,6 +43,8 @@
 		E0CA96E321C644E3006D0F3B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CA96E221C644E3006D0F3B /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E0EC5F1021BCE0CF00B8C3BF /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */; };
 		E0F2D0E221C7C021006D2484 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2D0E121C7C021006D2484 /* Constants.swift */; };
+		E0F803132202E57C00076432 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F803112202E57B00076432 /* unchecked.png */; };
+		E0F803142202E57C00076432 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = E0F803122202E57B00076432 /* checked.png */; };
 		E0FD601D21C3C9C300D94A7C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FD601C21C3C9C200D94A7C /* Location.swift */; };
 		E0FD601F21C3C9F300D94A7C /* LocationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FD601E21C3C9F300D94A7C /* LocationStorage.swift */; };
 		F9159EAC21A0455A001439BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9159EAB21A0455A001439BC /* CoreLocation.framework */; };
@@ -91,6 +101,14 @@
 		401904A3EEE629B4C174B12C /* Pods-MoneyyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyyBox/Pods-MoneyyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		E011FBD221F4FD9400763575 /* iconfinder_control-record-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfinder_control-record-circle.png"; sourceTree = "<group>"; };
 		E011FBD421F501E800763575 /* iconfinder_Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_Camera.png; sourceTree = "<group>"; };
+		E021456D220373B100F299E7 /* env.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = env.png; path = ../../../../../../../env.png; sourceTree = "<group>"; };
+		E021456E220373B200F299E7 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		E021456F220373B200F299E7 /* take_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo.png; sourceTree = "<group>"; };
+		E0214570220373B200F299E7 /* change_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = change_password.png; sourceTree = "<group>"; };
+		E0214571220373B200F299E7 /* refer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refer.png; sourceTree = "<group>"; };
+		E025598322019F0D00DEB684 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		E025598522019F2900DEB684 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		E025598722019F4700DEB684 /* ReferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferVC.swift; sourceTree = "<group>"; };
 		E03908D921D76B9700BFBB6E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E03B884321E4B50800F19FB8 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		E03B884521E4B50800F19FB8 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
@@ -118,6 +136,8 @@
 		E0D9879A21C6434F00ED07C2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EC5F0F21BCE0CF00B8C3BF /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		E0F2D0E121C7C021006D2484 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E0F803112202E57B00076432 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		E0F803122202E57B00076432 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		E0FD601C21C3C9C200D94A7C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E0FD601E21C3C9F300D94A7C /* LocationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStorage.swift; sourceTree = "<group>"; };
 		E6799A4D8354644CCF7BA8C9 /* Pods-MoneyyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyyBox/Pods-MoneyyBox.release.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +351,9 @@
 				E0FD601E21C3C9F300D94A7C /* LocationStorage.swift */,
 				E081239521F35C6C0013EF62 /* CamaraVC.swift */,
 				E081239721F3643A0013EF62 /* PreviewVC.swift */,
+				E025598322019F0D00DEB684 /* ContactVC.swift */,
+				E025598522019F2900DEB684 /* HelpVC.swift */,
+				E025598722019F4700DEB684 /* ReferVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,6 +381,8 @@
 			children = (
 				F9159EC621A1303E001439BC /* marker.png */,
 				F9159EC521A1303E001439BC /* marker@2x.png */,
+				E0F803122202E57B00076432 /* checked.png */,
+				E0F803112202E57B00076432 /* unchecked.png */,
 				F9159EC721A1303E001439BC /* marker@3x.png */,
 				F9159EC121A12F71001439BC /* mapPin@1x.png */,
 				F9159EC221A12F71001439BC /* mapPin@2x.png */,
@@ -394,11 +419,16 @@
 				F94DE1A22184E903001C9DEE /* menu.png */,
 				F94DE1A32184E903001C9DEE /* menu1.png */,
 				F94DE1862184C791001C9DEE /* about.png */,
+				E0214570220373B200F299E7 /* change_password.png */,
 				F94DE1872184C792001C9DEE /* contact.png */,
+				E021456E220373B200F299E7 /* help.png */,
+				E0214571220373B200F299E7 /* refer.png */,
+				E021456F220373B200F299E7 /* take_photo.png */,
 				F94DE1842184C791001C9DEE /* history.png */,
 				F94DE1852184C791001C9DEE /* logout.png */,
 				F94DE1822184C791001C9DEE /* mylocation.png */,
 				F94DE1832184C791001C9DEE /* setting.png */,
+				E021456D220373B100F299E7 /* env.png */,
 			);
 			path = Drawer;
 			sourceTree = "<group>";
@@ -496,19 +526,25 @@
 				F94DE1882184C792001C9DEE /* mylocation.png in Resources */,
 				E011FBD321F4FD9600763575 /* iconfinder_control-record-circle.png in Resources */,
 				E011FBD521F501EB00763575 /* iconfinder_Camera.png in Resources */,
+				E0F803132202E57C00076432 /* unchecked.png in Resources */,
+				E0F803142202E57C00076432 /* checked.png in Resources */,
 				F94DE1A52184E903001C9DEE /* menu1.png in Resources */,
 				F94DE1802184C4B9001C9DEE /* Rajdhani-SemiBold.ttf in Resources */,
 				E0BD9F9321D8C1BB007132D4 /* Assets.xcassets in Resources */,
 				F94DE1A42184E903001C9DEE /* menu.png in Resources */,
+				E0214576220373B200F299E7 /* refer.png in Resources */,
 				F94DE1952184C7E5001C9DEE /* loginicon.png in Resources */,
 				F94DE18A2184C792001C9DEE /* history.png in Resources */,
 				F94DE18D2184C792001C9DEE /* contact.png in Resources */,
 				F94DE17F2184C4B9001C9DEE /* Rajdhani-Bold.ttf in Resources */,
+				E0214575220373B200F299E7 /* change_password.png in Resources */,
 				F94DE17D2184C4B9001C9DEE /* Rajdhani-Regular.ttf in Resources */,
+				E0214572220373B200F299E7 /* env.png in Resources */,
 				F94DE1632184C05A001C9DEE /* LaunchScreen.storyboard in Resources */,
 				F94DE1892184C792001C9DEE /* setting.png in Resources */,
 				F94DE19F2184E38C001C9DEE /* CPAlert.storyboard in Resources */,
 				F9159EC821A1303E001439BC /* marker@2x.png in Resources */,
+				E0214573220373B200F299E7 /* help.png in Resources */,
 				F94DE1A92184E9F5001C9DEE /* Back.png in Resources */,
 				F9159EB421A04D88001439BC /* navs.png in Resources */,
 				F9159EC421A12F71001439BC /* mapPin@2x.png in Resources */,
@@ -521,6 +557,7 @@
 				F9159EBB21A12E87001439BC /* sv@2x.png in Resources */,
 				F94DE17E2184C4B9001C9DEE /* Rajdhani-Medium.ttf in Resources */,
 				E03B886221E4B50800F19FB8 /* IQKeyboardManager.bundle in Resources */,
+				E0214574220373B200F299E7 /* take_photo.png in Resources */,
 				F94DE15B2184C053001C9DEE /* Main.storyboard in Resources */,
 				F9159EB221A04D50001439BC /* nav@1x.png in Resources */,
 				F9159EB121A04D50001439BC /* nav@2x.png in Resources */,
@@ -612,6 +649,7 @@
 				E081239621F35C6C0013EF62 /* CamaraVC.swift in Sources */,
 				E03B885C21E4B50800F19FB8 /* IQBarButtonItem.swift in Sources */,
 				E0FD601D21C3C9C300D94A7C /* Location.swift in Sources */,
+				E025598822019F4700DEB684 /* ReferVC.swift in Sources */,
 				E03B886721E4B50800F19FB8 /* IQUITextFieldView+Additions.swift in Sources */,
 				F94DE19D2184E38C001C9DEE /* CPAlertAction.swift in Sources */,
 				F94DE1742184C14B001C9DEE /* RegisterVC.swift in Sources */,
@@ -622,9 +660,11 @@
 				F94DE1782184C246001C9DEE /* WelcomeVC.swift in Sources */,
 				E03B886021E4B50800F19FB8 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				F9159EB621A05C4F001439BC /* ChangePasswordVC.swift in Sources */,
+				E025598622019F2900DEB684 /* HelpVC.swift in Sources */,
 				F94DE1B12184F22E001C9DEE /* MenuViewController.swift in Sources */,
 				F94DE1562184C053001C9DEE /* AppDelegate.swift in Sources */,
 				E0EC5F1021BCE0CF00B8C3BF /* UserProfileVC.swift in Sources */,
+				E025598422019F0D00DEB684 /* ContactVC.swift in Sources */,
 				E0F2D0E221C7C021006D2484 /* Constants.swift in Sources */,
 				F94DE1722184C13B001C9DEE /* LoginVC.swift in Sources */,
 				F94DE19E2184E38C001C9DEE /* CPAlertVC.swift in Sources */,
