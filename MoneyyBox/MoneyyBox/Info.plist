@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Moneyy Box</string>
+	<string>Kazoom</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconName</key>
@@ -25,7 +25,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -38,11 +38,11 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Kazoom required your camara to make work.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Will you allow moneybox to always know your location?</string>
+	<string>Will you allow Kazoom to always know your location?</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Will you allow this app to always know your location?</string>
+	<string>Will you allow Kazoom to always know your location?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Moneybox required your current location to make work.</string>
+	<string>Kazoom required your current location to make work.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Kazoom required your photo library</string>
 	<key>UIAppFonts</key>
