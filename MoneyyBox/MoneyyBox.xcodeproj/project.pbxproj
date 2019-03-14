@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815BC6BF220D538C002E336B /* contact_us.png in Resources */ = {isa = PBXBuildFile; fileRef = 815BC6BE220D538C002E336B /* contact_us.png */; };
+		815BC6C1220D54FC002E336B /* camera1.png in Resources */ = {isa = PBXBuildFile; fileRef = 815BC6C0220D54FC002E336B /* camera1.png */; };
 		9FCB429A54A32A1F78F4071E /* Pods_MoneyyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AE6E95C61DC56743EFC8B1 /* Pods_MoneyyBox.framework */; };
+		E011A1EC2207102B0034C9DC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E011A1EB2207102B0034C9DC /* logo.png */; };
 		E011FBD321F4FD9600763575 /* iconfinder_control-record-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = E011FBD221F4FD9400763575 /* iconfinder_control-record-circle.png */; };
 		E011FBD521F501EB00763575 /* iconfinder_Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E011FBD421F501E800763575 /* iconfinder_Camera.png */; };
-		E0214572220373B200F299E7 /* env.png in Resources */ = {isa = PBXBuildFile; fileRef = E021456D220373B100F299E7 /* env.png */; };
 		E0214573220373B200F299E7 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = E021456E220373B200F299E7 /* help.png */; };
 		E0214574220373B200F299E7 /* take_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = E021456F220373B200F299E7 /* take_photo.png */; };
 		E0214575220373B200F299E7 /* change_password.png in Resources */ = {isa = PBXBuildFile; fileRef = E0214570220373B200F299E7 /* change_password.png */; };
@@ -82,7 +84,6 @@
 		F94DE18C2184C792001C9DEE /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1862184C791001C9DEE /* about.png */; };
 		F94DE18D2184C792001C9DEE /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1872184C792001C9DEE /* contact.png */; };
 		F94DE1912184C7BB001C9DEE /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1902184C7BB001C9DEE /* splash.png */; };
-		F94DE1932184C7CD001C9DEE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1922184C7CC001C9DEE /* logo.png */; };
 		F94DE1952184C7E5001C9DEE /* loginicon.png in Resources */ = {isa = PBXBuildFile; fileRef = F94DE1942184C7E5001C9DEE /* loginicon.png */; };
 		F94DE1992184D58C001C9DEE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94DE1972184D58C001C9DEE /* PageViewController.swift */; };
 		F94DE19D2184E38C001C9DEE /* CPAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94DE19A2184E38C001C9DEE /* CPAlertAction.swift */; };
@@ -99,9 +100,11 @@
 
 /* Begin PBXFileReference section */
 		401904A3EEE629B4C174B12C /* Pods-MoneyyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyyBox/Pods-MoneyyBox.debug.xcconfig"; sourceTree = "<group>"; };
+		815BC6BE220D538C002E336B /* contact_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_us.png; sourceTree = "<group>"; };
+		815BC6C0220D54FC002E336B /* camera1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera1.png; sourceTree = "<group>"; };
+		E011A1EB2207102B0034C9DC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E011FBD221F4FD9400763575 /* iconfinder_control-record-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfinder_control-record-circle.png"; sourceTree = "<group>"; };
 		E011FBD421F501E800763575 /* iconfinder_Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_Camera.png; sourceTree = "<group>"; };
-		E021456D220373B100F299E7 /* env.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = env.png; path = ../../../../../../../env.png; sourceTree = "<group>"; };
 		E021456E220373B200F299E7 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		E021456F220373B200F299E7 /* take_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo.png; sourceTree = "<group>"; };
 		E0214570220373B200F299E7 /* change_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = change_password.png; sourceTree = "<group>"; };
@@ -179,7 +182,6 @@
 		F94DE1862184C791001C9DEE /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		F94DE1872184C792001C9DEE /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
 		F94DE1902184C7BB001C9DEE /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
-		F94DE1922184C7CC001C9DEE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F94DE1942184C7E5001C9DEE /* loginicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginicon.png; sourceTree = "<group>"; };
 		F94DE1972184D58C001C9DEE /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F94DE19A2184E38C001C9DEE /* CPAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPAlertAction.swift; sourceTree = "<group>"; };
@@ -421,6 +423,8 @@
 				F94DE1862184C791001C9DEE /* about.png */,
 				E0214570220373B200F299E7 /* change_password.png */,
 				F94DE1872184C792001C9DEE /* contact.png */,
+				815BC6C0220D54FC002E336B /* camera1.png */,
+				815BC6BE220D538C002E336B /* contact_us.png */,
 				E021456E220373B200F299E7 /* help.png */,
 				E0214571220373B200F299E7 /* refer.png */,
 				E021456F220373B200F299E7 /* take_photo.png */,
@@ -428,7 +432,6 @@
 				F94DE1852184C791001C9DEE /* logout.png */,
 				F94DE1822184C791001C9DEE /* mylocation.png */,
 				F94DE1832184C791001C9DEE /* setting.png */,
-				E021456D220373B100F299E7 /* env.png */,
 			);
 			path = Drawer;
 			sourceTree = "<group>";
@@ -436,7 +439,7 @@
 		F94DE18E2184C799001C9DEE /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				F94DE1922184C7CC001C9DEE /* logo.png */,
+				E011A1EB2207102B0034C9DC /* logo.png */,
 				F94DE1902184C7BB001C9DEE /* splash.png */,
 			);
 			path = Splash;
@@ -484,7 +487,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = FH;
+				ORGANIZATIONNAME = "Cube Technology";
 				TargetAttributes = {
 					F94DE1512184C053001C9DEE = {
 						CreatedOnToolsVersion = 9.4;
@@ -524,6 +527,7 @@
 			files = (
 				F9159EC321A12F71001439BC /* mapPin@1x.png in Resources */,
 				F94DE1882184C792001C9DEE /* mylocation.png in Resources */,
+				815BC6BF220D538C002E336B /* contact_us.png in Resources */,
 				E011FBD321F4FD9600763575 /* iconfinder_control-record-circle.png in Resources */,
 				E011FBD521F501EB00763575 /* iconfinder_Camera.png in Resources */,
 				E0F803132202E57C00076432 /* unchecked.png in Resources */,
@@ -539,7 +543,6 @@
 				F94DE17F2184C4B9001C9DEE /* Rajdhani-Bold.ttf in Resources */,
 				E0214575220373B200F299E7 /* change_password.png in Resources */,
 				F94DE17D2184C4B9001C9DEE /* Rajdhani-Regular.ttf in Resources */,
-				E0214572220373B200F299E7 /* env.png in Resources */,
 				F94DE1632184C05A001C9DEE /* LaunchScreen.storyboard in Resources */,
 				F94DE1892184C792001C9DEE /* setting.png in Resources */,
 				F94DE19F2184E38C001C9DEE /* CPAlert.storyboard in Resources */,
@@ -552,14 +555,15 @@
 				F94DE18B2184C792001C9DEE /* logout.png in Resources */,
 				F9159EC921A1303E001439BC /* marker.png in Resources */,
 				F9159EBF21A12EB2001439BC /* tv.png in Resources */,
-				F94DE1932184C7CD001C9DEE /* logo.png in Resources */,
 				F9159EAE21A04C29001439BC /* blueNav.png in Resources */,
 				F9159EBB21A12E87001439BC /* sv@2x.png in Resources */,
 				F94DE17E2184C4B9001C9DEE /* Rajdhani-Medium.ttf in Resources */,
+				E011A1EC2207102B0034C9DC /* logo.png in Resources */,
 				E03B886221E4B50800F19FB8 /* IQKeyboardManager.bundle in Resources */,
 				E0214574220373B200F299E7 /* take_photo.png in Resources */,
 				F94DE15B2184C053001C9DEE /* Main.storyboard in Resources */,
 				F9159EB221A04D50001439BC /* nav@1x.png in Resources */,
+				815BC6C1220D54FC002E336B /* camera1.png in Resources */,
 				F9159EB121A04D50001439BC /* nav@2x.png in Resources */,
 				F94DE1AA2184E9F5001C9DEE /* Back@2x.png in Resources */,
 				F9159EC021A12EB2001439BC /* tv@2x.png in Resources */,

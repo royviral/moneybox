@@ -25,7 +25,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>14</string>
+	<string>21</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -36,13 +36,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Kazoom required your camara to make work.</string>
+	<string>The purpose of the app using the camera is so we may request a picture of the advertising on the motorcycle delivery riders bikes two times a month. By having a take pic option on the app it does not allow the user to upload a picture already stored on their phones or devices and only allows them to upload the picture taken on the app itself.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Will you allow Kazoom to always know your location?</string>
+	<string>Allowing access to the location you're allowing app to keep tracking your location and route. This app is designed to track logistics of riders.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Will you allow Kazoom to always know your location?</string>
+	<string>Allowing access to the location you're allowing app to keep tracking your location and route. This app is designed to track logistics of riders.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Kazoom required your current location to make work.</string>
+	<string>Allowing access to the location you're allowing app to keep tracking your location and route. This app is designed to track logistics of riders.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Kazoom required your photo library</string>
 	<key>UIAppFonts</key>
